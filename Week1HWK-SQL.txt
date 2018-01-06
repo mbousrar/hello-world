@@ -18,26 +18,27 @@ QUESTION 2. a.
 
 QUESTION 3.
     
-   select COUNT(*) from flights;
+   select SUM(flight) from flights;
 
 QUESTION 4.
-      SELECT carrier, COUNT(*) FROM flights GROUP BY carrier;
+      select carrier, SUM(flight) from flights GROUP BY carrier ;
 
 QUESTION 5.
-   SELECT carrier, COUNT(*) FROM flights GROUP BY carrier ORDER BY COUNT(*) DESC;
+   SELECT carrier, SUM(flight) FROM flights GROUP BY carrier ORDER BY SUM(flight) DESC;
 
 QUESTION 6.
- SELECT carrier, COUNT(*)
+ SELECT carrier, SUM(flight)
 FROM flights
 GROUP BY carrier
-ORDER BY COUNT(*) DESC
+ORDER BY SUM(flight) DESC
 LIMIT 5;
 
 QUESTION 7.
-SELECT carrier, COUNT(*)
+SELECT carrier, SUM(flight)
 FROM flights
+WHERE distance >= 1000
 GROUP BY carrier
-ORDER BY COUNT(*) DESC
+ORDER BY SUM(flight) DESC
 LIMIT 5;
 
 QUESTION 8.
