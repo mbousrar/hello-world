@@ -1,0 +1,47 @@
+QUESTION 1. select MAX(distance) from flights;
+   4983
+
+QUESTION 2. a. 
+   select engines from planes group by engines;
+   1
+   2
+   3
+   4
+   
+   b.
+   select engines, MAX(seats) from planes group by engines;
+
+   1   16
+   2   400
+   3   379
+   4   450
+
+QUESTION 3.
+    
+   select COUNT(*) from flights;
+
+QUESTION 4.
+      SELECT carrier, COUNT(*) FROM flights GROUP BY carrier;
+
+QUESTION 5.
+   SELECT carrier, COUNT(*) FROM flights GROUP BY carrier ORDER BY COUNT(*) DESC;
+
+QUESTION 6.
+ SELECT carrier, COUNT(*)
+FROM flights
+GROUP BY carrier
+ORDER BY COUNT(*) DESC
+LIMIT 5;
+
+QUESTION 7.
+SELECT carrier, COUNT(*)
+FROM flights
+GROUP BY carrier
+ORDER BY COUNT(*) DESC
+LIMIT 5;
+
+QUESTION 8.
+ Identify which month of the year that has the most number of flights.
+select month, MAX(flight) from flights;
+month  |  Max(flights)
+1         8500
